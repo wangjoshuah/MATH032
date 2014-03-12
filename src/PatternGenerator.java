@@ -5,6 +5,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 
+import javax.imageio.ImageIO;
 import javax.swing.JComponent;
 import javax.swing.JFileChooser;
 
@@ -78,10 +79,8 @@ public class PatternGenerator {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//		String filepath = getFilePath();
-		String filepath = "/Users/joshuawang/Documents/CS10workspace/MATH032/./pictures/butterfly.jpg";
-//		String filepath = "/Users/joshuawang/Work/DAASV/FinalImages/PB_AM.png";
+		String filepath = getFilePath();
 		System.out.println(filepath);
-		Wallpaper pattern = new Wallpaper(filepath, 800, 600, "442");
+		Wallpaper pattern = new Wallpaper(filepath, 800, 600, "2*22");
 	}
 }

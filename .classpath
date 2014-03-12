@@ -2,5 +2,9 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/Users/joshuawang/Dropbox/Dartmouth/Classes/CS10/javacv-bin/javacpp.jar"/>
+	<classpathentry kind="lib" path="/Users/joshuawang/Dropbox/Dartmouth/Classes/CS10/javacv-bin/javacv-macosx-x86_64.jar"/>
+	<classpathentry kind="lib" path="/Users/joshuawang/Dropbox/Dartmouth/Classes/CS10/javacv-bin/javacv.jar"/>
+	<classpathentry kind="lib" path="/Users/joshuawang/Dropbox/Dartmouth/Classes/CS10/javacv-cppjars/opencv-2.4.6.1-macosx-x86_64.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

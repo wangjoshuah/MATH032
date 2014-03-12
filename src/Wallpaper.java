@@ -35,8 +35,13 @@ public class Wallpaper {
 		orbifold = createOrbifold(domain, patternType);
 		tessalate();
 		gui.setImage(wallpaper);
-		// Hold on to a copy of the image (so can mess it up).
-		wallpaper = gui.getImage();
+		try {
+			ImageIO.write(gui.getImage(), "jpg", new File("pictures/snapshot.jpg"));
+			System.out.println("Saved a snapshot");
+		}
+		catch (Exception e) {
+			System.err.println("Couldn't save snapshot.");
+		}
 	}
 
 	private BufferedImage createOrbifold(BufferedImage input, String patternType) {
