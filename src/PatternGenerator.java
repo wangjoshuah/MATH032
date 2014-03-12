@@ -17,18 +17,11 @@ import javax.swing.JFileChooser;
  */
 public class PatternGenerator {
 	private static final int width = 800, height = 800;
-	
+
 	//instance variables of our Pattern Generator Object
 	private JComponent canvas, gui;
 	private Point point = null;				// initial mouse press for drawing; current position for moving
 
-	
-	
-	
-	
-	
-	
-	
 	/**
 	 * Puts up a fileChooser and gets path name for file to be opened.
 	 * Returns an empty string if the user clicks "cancel".
@@ -46,7 +39,7 @@ public class PatternGenerator {
 		else
 			return "";
 	}
-	
+
 	/**
 	 * set up our canvas with images and click listeners
 	 */
@@ -56,7 +49,7 @@ public class PatternGenerator {
 				super.paintComponent(g);
 				// If there is an object, draw it; if it is selected, also put a border on it
 				// YOUR CODE HERE
-				
+
 			}
 		};
 
@@ -68,7 +61,7 @@ public class PatternGenerator {
 				// In drawing mode, start a new object;
 				// in editing mode, set selected according to whether the current object (if it exists) contains the point
 				// YOUR CODE HERE
-				
+
 			}
 		});		
 
@@ -78,14 +71,17 @@ public class PatternGenerator {
 				// in editing mode, move the object by the difference between the current point and the previous one
 				// YOUR CODE HERE
 				Point p2 = event.getPoint();
-				
+
 			}				
 		});
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String filepath = getFilePath();
+//		String filepath = getFilePath();
+		String filepath = "/Users/joshuawang/Documents/CS10workspace/MATH032/./pictures/butterfly.jpg";
+//		String filepath = "/Users/joshuawang/Work/DAASV/FinalImages/PB_AM.png";
+		System.out.println(filepath);
+		Wallpaper pattern = new Wallpaper(filepath, 800, 600, "442");
 	}
-
 }
