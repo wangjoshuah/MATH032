@@ -1,12 +1,7 @@
-import javax.imageio.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
 
-import java.io.*;
-
-import javax.swing.*;
-
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.image.*;
+import javax.imageio.ImageIO;
 
 /**
  * A class demonstrating manipulation of image pixels.
@@ -36,7 +31,7 @@ public class Wallpaper {
 		tessalate();
 		gui.setImage(wallpaper);
 		try {
-			ImageIO.write(gui.getImage(), "jpg", new File("pictures/snapshot.jpg"));
+			ImageIO.write(gui.getImage(), "jpg", new File("Wall Paper Pattern.jpg"));
 			System.out.println("Saved a snapshot");
 		}
 		catch (Exception e) {

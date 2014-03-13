@@ -1,13 +1,22 @@
+import java.awt.BorderLayout;
+import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Point;
+import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
 
-import javax.imageio.ImageIO;
-import javax.swing.JComponent;
-import javax.swing.JFileChooser;
+import javax.swing.*;
+
+import java.awt.*;
+import java.awt.event.*;
 
 /**
  * Pattern Generator class
@@ -17,12 +26,10 @@ import javax.swing.JFileChooser;
  * Started 3/1/2014
  */
 public class PatternGenerator {
-	private static final int width = 800, height = 800;
-
-	//instance variables of our Pattern Generator Object
 	private JComponent canvas, gui;
-	private Point point = null;				// initial mouse press for drawing; current position for moving
 
+	
+	static String filepath;
 	/**
 	 * Puts up a fileChooser and gets path name for file to be opened.
 	 * Returns an empty string if the user clicks "cancel".
@@ -41,46 +48,13 @@ public class PatternGenerator {
 			return "";
 	}
 
-	/**
-	 * set up our canvas with images and click listeners
-	 */
-	private void setupCanvas() {
-		canvas = new JComponent() {
-			public void paintComponent(Graphics g) {
-				super.paintComponent(g);
-				// If there is an object, draw it; if it is selected, also put a border on it
-				// YOUR CODE HERE
-
-			}
-		};
-
-		canvas.setPreferredSize(new Dimension(width, height));
-
-		canvas.addMouseListener(new MouseAdapter() {
-			public void mousePressed(MouseEvent event) {
-				point = event.getPoint();
-				// In drawing mode, start a new object;
-				// in editing mode, set selected according to whether the current object (if it exists) contains the point
-				// YOUR CODE HERE
-
-			}
-		});		
-
-		canvas.addMouseMotionListener(new MouseAdapter() {
-			public void mouseDragged(MouseEvent event) {
-				// In drawing mode, update the other corner of the object;
-				// in editing mode, move the object by the difference between the current point and the previous one
-				// YOUR CODE HERE
-				Point p2 = event.getPoint();
-
-			}				
-		});
-	}
-
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		String filepath = getFilePath();
-		System.out.println(filepath);
-		Wallpaper pattern = new Wallpaper(filepath, 800, 600, "2*22");
+		filepath = getFilePath();
+//		String orbifoldFilePath = getFilePath();
+//		BufferedReader orbifoldReader = new BufferedReader(new FileReader(orbifoldFilePath));
+//		String orbifoldName = orbifoldReader.readLine();
+//		orbifoldReader.close();
+		Wallpaper pattern = new Wallpaper(filepath, 800, 600, "442");
 	}
 }

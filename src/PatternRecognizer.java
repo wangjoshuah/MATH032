@@ -1,12 +1,9 @@
 import java.awt.Color;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
 import javax.imageio.ImageIO;
 import javax.swing.JFileChooser;
-import javax.swing.SwingUtilities;
 
 
 public class PatternRecognizer {
