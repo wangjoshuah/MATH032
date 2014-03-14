@@ -31,7 +31,7 @@ public class Wallpaper {
 		tessalate();
 		gui.setImage(wallpaper);
 		try {
-			ImageIO.write(gui.getImage(), "jpg", new File("Wall Paper Pattern.jpg"));
+			ImageIO.write(gui.getImage(), "jpg", new File(patternType + " Wall Paper Pattern.jpg"));
 			System.out.println("Saved a snapshot");
 		}
 		catch (Exception e) {

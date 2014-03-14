@@ -51,6 +51,8 @@ public class PatternGenerator {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		filepath = getFilePath();
+//		filepath = "/Users/joshuawang/Documents/CS10workspace/MATH032/./pictures/butterfly.jpg";
+//		System.out.println(filepath);
 //		String orbifoldFilePath = getFilePath();
 //		BufferedReader orbifoldReader = new BufferedReader(new FileReader(orbifoldFilePath));
 //		String orbifoldName = orbifoldReader.readLine();

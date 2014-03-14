@@ -109,5 +109,12 @@ public class PatternRecognizer {
 		PatternRecognizer test = new PatternRecognizer(filePath);
 		test.translationTest();
 		DrawingFrame display = new DrawingFrame("best guess", test.bestGuess);
+		try {
+			ImageIO.write(test.bestGuess, "jpg", new File("Domain.jpg"));
+			System.out.println("Saved a snapshot");
+		}
+		catch (Exception e) {
+			System.err.println("Couldn't save snapshot.");
+		}
 	}
 }
